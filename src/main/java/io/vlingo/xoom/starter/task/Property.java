@@ -28,6 +28,7 @@ public enum Property {
     CQRS("cqrs"),
     ANNOTATIONS("annotations"),
     AUTO_DISPATCH("auto.dispatch"),
+    ANGULAR_APP("angular.app"),
     PROJECTIONS("projections"),
     DATABASE("database"),
     COMMAND_MODEL_DATABASE("command.model.database"),

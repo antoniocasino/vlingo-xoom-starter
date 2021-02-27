@@ -19,6 +19,7 @@
   let projectDirectory = $generationSettings ? $generationSettings.projectDirectory : "";
   let useAnnotations = $generationSettings ? $generationSettings.useAnnotations : false;
   let useAutoDispatch = $generationSettings ? $generationSettings.useAutoDispatch : false;
+  let generateAngularApp = $generationSettings ? $generationSettings.generateAngularApp : false;
   let processing = false;
   let status;
   let snackbar = false;
@@ -58,6 +59,7 @@
 	<TextField class="mb-4" placeholder="D:\demo-projects" bind:value={projectDirectory} rules={[requireRule]}>Absolute path where you want to generate the project</TextField>
 	<Switch class="mb-4" bind:checked={useAnnotations}>Use VLINGO/XOOM annotations</Switch>
   <Switch class="mb-4" bind:checked={useAutoDispatch} disabled={!useAnnotations}>Use VLINGO/XOOM auto dispatch</Switch>
+    <Switch class="mb-4" bind:checked={generateAngularApp}>Generate Angular app</Switch>
 
   <Button class="mt-4 mr-4" on:click={generate} disabled={!valid}>Generate</Button>
   {#if processing}
